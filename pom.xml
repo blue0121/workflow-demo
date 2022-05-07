@@ -24,6 +24,7 @@
 
         <!-- boot -->
         <spring.boot.version>2.6.7</spring.boot.version>
+        <camunda.version>7.17.0</camunda.version>
 
         <!-- test -->
         <h2.version>2.1.212</h2.version>
@@ -48,6 +49,12 @@
                 <version>${spring.boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.camunda.bpm.springboot</groupId>
+                <artifactId>camunda-bpm-spring-boot-starter</artifactId>
+                <version>${camunda.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
