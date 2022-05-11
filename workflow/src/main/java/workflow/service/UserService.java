@@ -29,6 +29,18 @@ public class UserService {
 		return userRepository.findByUsernameIn(nameList);
 	}
 
+	public List<UserEntity> listAll() {
+		return userRepository.findAll();
+	}
+
+	public UserEntity login(String username, String password) {
+		var user = userRepository.findByUsername(username);
+		if (user == null || !user.getPassword().equals(password)) {
+			return null;
+		}
+		return user;
+	}
+
 	@Autowired
 	public void setUserRepository(UserRepository userRepository) {
 		this.userRepository = userRepository;

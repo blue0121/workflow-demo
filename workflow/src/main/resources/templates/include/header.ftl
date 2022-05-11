@@ -34,21 +34,20 @@
                     <a class="dropdown-toggle" data-toggle="dropdown">管理 <b class="caret"></b></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="/repository">流程定义</a></li>
+                        <li><a href="/user">所有用户</a></li>
                     </ul>
                 </li>
             </ul>
 
             <!-- 右侧的导航项目 -->
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="your/nice/url">帮助</a></li>
+                <!--<li><a href="#">帮助</a></li>-->
                 <li class="dropdown">
-                    <a href="your/nice/url" class="dropdown-toggle" data-toggle="dropdown">探索 <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">${(Session["user"].username)!} <b class="caret"></b></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="your/nice/url">敏捷开发</a></li>
-                        <li><a href="your/nice/url">HTML5</a></li>
-                        <li><a href="your/nice/url">Javascript</a></li>
+                        <li><a href="/task/owner">我发起的</a></li>
                         <li class="divider"></li>
-                        <li><a href="your/nice/url">探索宇宙</a></li>
+                        <li><a href="/logout">登出</a></li>
                     </ul>
                 </li>
             </ul>

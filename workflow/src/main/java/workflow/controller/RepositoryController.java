@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import workflow.util.Const;
 
 /**
  * @author Jin Zheng
@@ -21,8 +22,8 @@ public class RepositoryController {
 	@GetMapping("/repository")
 	public String list(Model model) {
 		var list = repositoryService.createProcessDefinitionQuery().list();
-		model.addAttribute("title", "流程定义");
-		model.addAttribute("list", list);
+		model.addAttribute(Const.TITLE_KEY, "流程定义");
+		model.addAttribute(Const.LIST_KEY, list);
 		return "repository/list";
 	}
 
